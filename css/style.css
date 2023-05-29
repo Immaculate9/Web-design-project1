@@ -1,16 +1,104 @@
-body{
-	background-image: ('background7.jpg');
-	background: linear-gradient(45deg, skyblue, lightgreen);
-	background-repeat: no-repeat;
-	background-size: cover;	
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
-table {
+html,
+body {
+  line-height: 1.5;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 18px;
+  text-rendering: optimizeLegibility;
+}
+nav {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  position: sticky;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 1030;
+  box-shadow: 0 7px 20px rgba(46, 71, 143, 0.4);
+  background-color: #ffff;
+}
+.nav-ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-link {
+  text-decoration: none;
+  padding: 8px;
+  color: skyblue;
+}
+.active{
+  text-decoration: underline;
+}
+.main-container {
+  background: linear-gradient(45deg, skyblue, lightgreen);
+  background-image: url("../images/background7.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.headerImg {
+  background: url("../images/background7.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.backgroundOverlay {
+  background-color: rgb(3 14 14 / 82%);
+  height: 100vh;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.65;
+}
+.headerText {
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.chooseUsContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+.chooseUsContainerText ol {
+  padding: 10px;
+  margin-left: 20px;
+}
+footer {
+  padding: 15px;
+  background-color: #192a34;
+  color: #ffff;
+}
+.experience {
+  padding: 10px;
+}
+
+/* table {
   width: 100%;
   background: #ffff;
   position: fixed;
   height: auto;
   margin-top: 0px;
-  size:10%;
+  size: 10%;
 }
 footer {
   width: 100%;
@@ -18,13 +106,12 @@ footer {
   position: bottom;
   height: auto;
   margin-top: 0px;
-  padding:3px;
+  padding: 3px;
 }
 
 td {
   padding: 1px;
   text-align: center;
-
 }
 
 td a {
@@ -37,41 +124,38 @@ td a:hover {
   color: blue;
 }
 a:visited {
-  color: green; 
-  text-decoration: underline; 
+  color: green;
+  text-decoration: underline;
 }
-h1{
-	text-align: center;
-	font-family: montserrat, arial, havitical;
-	color: blue;
+h1 {
+  text-align: center;
+  font-family: montserrat, arial, havitical;
+  color: blue;
 }
-h3{
-	text-align: center;
-	font-family: montserrat, arial, havitical;
-	color: #ffffff;
+h3 {
+  text-align: center;
+  font-family: montserrat, arial, havitical;
+  color: #ffffff;
 }
-h4{
-	text-align: center;
-	font-family: montserrat, arial, havitical;
-	color: blue;
-	font-size:20px;
+h4 {
+  text-align: center;
+  font-family: montserrat, arial, havitical;
+  color: blue;
+  font-size: 20px;
 }
-h5{
-	text-align: center;
-	font-family: montserrat, arial, havitical;
-	color:white;
-	font-size:25px;
-	
+h5 {
+  text-align: center;
+  font-family: montserrat, arial, havitical;
+  color: white;
+  font-size: 25px;
 }
-h2{
-	font-family: montserrat, arial, havitical;
-	color:white;
-	
-	
+h2 {
+  font-family: montserrat, arial, havitical;
+  color: white;
 }
-submit{
-	color: blue;
-	border-radius:10px;
+submit {
+  color: blue;
+  border-radius: 10px;
 }
 button {
   display: block;
@@ -101,22 +185,22 @@ button:hover {
 button:hover {
   background-color: #45a049;
 }
-p{
-	text-align: center;
-	font-family: montserrat, arial, havitical;
-	color: ;
+p {
+  text-align: center;
+  font-family: montserrat, arial, havitical;
+  color: ;
 }
-.p1{
-	text-align: center;
-	font-family: montserrat, arial, havitical;
-	color: white ;
-	font-size: 20px;
+.p1 {
+  text-align: center;
+  font-family: montserrat, arial, havitical;
+  color: white;
+  font-size: 20px;
 }
-.experience{
-	text-align: left;
-	font-family: montserrat, arial, havitical;
-	color: black;
-	font-size: 20px;
+.experience {
+  text-align: left;
+  font-family: montserrat, arial, havitical;
+  color: black;
+  font-size: 20px;
 }
 .product-container {
   display: flex;
@@ -150,14 +234,13 @@ p{
   border-radius: 4px;
   cursor: pointer;
   text-decoration: none;
-  font-size:20
+  font-size: 20;
 }
 
 .buy-now:hover {
   background-color: lightblue;
 }
-<!--- gallery style-->
-.gallery {
+<!--- gallery style-- > .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 100px;
@@ -201,11 +284,10 @@ p{
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  
 }
-.p3{
-	font-size:30px;
-	color:white;	
+.p3 {
+  font-size: 30px;
+  color: white;
 }
 .signup-container {
   max-width: 400px;
@@ -215,11 +297,11 @@ p{
   border-radius: 5px;
 }
 checkbox {
-      display: inline;
-      font-weight: normal;
-	  position:right-side;
-	  color:green;
-    }
+  display: inline;
+  font-weight: normal;
+  position: right-side;
+  color: green;
+}
 .p4 {
   text-align: center;
   margin-bottom: 20px;
@@ -247,12 +329,12 @@ input[type="password"] {
 
 button {
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  width:100%;
+  width: 100%;
 }
 
 button:hover {
@@ -294,22 +376,21 @@ input[type="password"] {
 
 button {
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  width:100%;
+  width: 100%;
 }
 
 button:hover {
   background-color: lightgreen;
 }
 
-
 .p6 {
   margin: 0;
-  font-size:30px;
+  font-size: 30px;
   color: white;
 }
 
@@ -327,17 +408,17 @@ h2 {
 
 .p7 {
   margin: 0;
-  background-color:lightblue;
-  padding:20px;
+  background-color: lightblue;
+  padding: 20px;
 }
 .p8 {
   margin: 0;
-  background-color:lightblue;
-  padding:10px;
+  background-color: lightblue;
+  padding: 10px;
 }
-.thankyou{ 
-color: blue;
-font-size:20px;
+.thankyou {
+  color: blue;
+  font-size: 20px;
 }
 .thankyou:hover {
   background-color: lightgreen;
@@ -356,8 +437,6 @@ font-size:20px;
 
 .group-form {
   display: grid;
- 
- 
 }
 input[type="text"],
 input[type="email"],
@@ -367,11 +446,10 @@ input[type="password"] {
   border: 1px solid #ccc;
 }
 
-
 label {
   font-weight: bold;
 }
-form{
+form {
   padding: 20px;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -379,28 +457,25 @@ form{
 
 button {
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  width:100%;
+  width: 100%;
 }
 
 button:hover {
   background-color: lightgreen;
 }
-#message{
-	height:200%;
+#message {
+  height: 200%;
 }
-#sendus{
-	height:200%;
+#sendus {
+  height: 200%;
 }
-#tele{
-	border-radius:8px;
-	height:180%;
-	border: 1px solid #ccc;
-
-	
-	
-}
+#tele {
+  border-radius: 8px;
+  height: 180%;
+  border: 1px solid #ccc;
+} */
